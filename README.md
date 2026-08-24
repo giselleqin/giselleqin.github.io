@@ -1,16 +1,18 @@
-## Hi there 👋
+# Giselle Qin Portfolio
 
-<!--
-**giselleqin/giselleqin** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+An English-first product and UX design portfolio built with React and Vite.
 
-Here are some ideas to get you started:
+## Local development
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+```bash
+npm install
+npm run dev
+```
+
+## Production build
+
+```bash
+npm run build
+```
+
+The site is configured for deployment at the root of a GitHub Pages user site. The final repository should be named `giselleqin.github.io`.
