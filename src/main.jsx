@@ -18,6 +18,8 @@ const projects = [
       "Ordinary smartphone photos vary in lighting, framing and scale. Professional multi-spectral equipment is costly and difficult to use for frequent home follow-up.",
     insight:
       "The design prioritizes controlled capture before analysis. A guided workflow supports attachment setup, multi-channel capture, quality checks and a longitudinal report.",
+    detail:
+      "The project responds to three connected gaps: the long-term burden of acne scarring, the cost and limited accessibility of clinical multi-spectral equipment, and the inconsistency of ordinary smartphone photographs. LumaSkin combines a compact optical attachment with a guided app workflow so people can capture the same region under comparable conditions, review change across multiple optical indicators, and prepare a clearer trend report for consultation.",
     images: [
       { src: "/assets/lumaskin-system.jpg", alt: "LumaSkin problem framing and monitoring system" },
       { src: "/assets/lumaskin-ui.jpg", alt: "LumaSkin app flow and interface design" },
@@ -41,6 +43,8 @@ const projects = [
       "Clinical waiting areas are often treated as circulation and seating. For secondary patients, they can intensify helplessness, sensory overload and anxiety.",
     insight:
       "Interviews and literature research pointed to three design needs: calming ambient support, clearer information and embodied interaction that restores a small sense of agency.",
+    detail:
+      "Based on literature review and semi-structured interviews, Buffer Zone reframes relatives in critical-care waiting areas as “secondary patients” affected by uncertainty, sensory overload and loss of agency. The concept brings together calm ambient feedback, more legible updates and simple embodied interactions to support emotional regulation while respecting the sensitivity and privacy of a clinical setting.",
     images: [
       { src: "/assets/buffer-zone-research.jpg", alt: "Buffer Zone interviews, literature study and user analysis" },
       { src: "/assets/buffer-zone-workflow.jpg", alt: "Buffer Zone sketches and interaction workflow" },
@@ -63,6 +67,8 @@ const projects = [
       "Home rehabilitation often depends on repeated manual assistance, while professional resources are unevenly distributed and difficult to sustain over time.",
     insight:
       "A distributed module layout adapts to different body areas. Magnetic fluid massage and EMS create complementary recovery modes, while the app coordinates setup and sessions.",
+    detail:
+      "Lattice Plus addresses the fragile transition from hospital rehabilitation to sustained recovery at home. Its distributed wearable modules adapt to different body areas and combine magnetic-fluid massage with electrical muscle stimulation, while a companion interface coordinates setup and treatment sessions. The system is designed to make repeated training easier to access for post-operative, older and long-term bedridden users.",
     images: [
       { src: "/assets/lattice-research.jpg", alt: "Lattice Plus research, applications and design insight" },
       { src: "/assets/lattice-system.jpg", alt: "Lattice Plus structure and app interface" },
@@ -85,6 +91,8 @@ const projects = [
       "Laser fabrication is widely used for cutting and engraving, but offers limited support for generating continuous, reversible volumetric forms from a flat input.",
     insight:
       "The project links material calibration, process planning, laser encoding and water activation in an end-to-end workflow. A Rhino and Grasshopper tool makes the non-linear behavior more accessible to designers.",
+    detail:
+      "LaserMorph treats laser processing as a way to encode latent volume rather than only remove material. Controlled ablation produces depth differences in compressed cellulose sponge; hydration releases the stored volume and turns the flat sheet into a continuous 3D form. After drying, the material can be thermally recompressed and activated again. Material calibration and a Rhino-Grasshopper workflow make this non-linear process controllable for rapid prototyping, tangible interfaces and compact deployment.",
     images: [
       { src: "/assets/lasermorph-mechanism.jpg", alt: "LaserMorph material mechanism" },
       { src: "/assets/lasermorph-workflow.jpg", alt: "LaserMorph fabrication workflow" },
@@ -275,6 +283,8 @@ function AboutPage() {
 }
 
 function ProjectPage({ project }) {
+  const isLaserMorph = project.slug === "lasermorph";
+
   return (
     <main className={`project-page theme-${project.theme}`}>
       <section className="project-hero shell">
@@ -286,7 +296,28 @@ function ProjectPage({ project }) {
           </div>
           <p>{project.summary}</p>
         </div>
-        <img src={project.cover} alt={`${project.title} project cover`} />
+        {isLaserMorph ? (
+          <>
+            <div className="featured-video">
+              <iframe
+                src="https://www.youtube-nocookie.com/embed/Z6qIfrtLf6Q?rel=0"
+                title="LaserMorph project video"
+                loading="eager"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              />
+            </div>
+            <div className="project-site-row">
+              <p>See the complete research, fabrication process and applications.</p>
+              <a className="project-site-cta" href="https://lasermorphweb.github.io/" target="_blank" rel="noreferrer">
+                Visit LaserMorph website <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </>
+        ) : (
+          <img src={project.cover} alt={`${project.title} project cover`} />
+        )}
       </section>
 
       <section className="project-meta shell">
@@ -300,15 +331,15 @@ function ProjectPage({ project }) {
           <p>Overview</p>
           <h2>{project.overview}</h2>
         </div>
-        <div className="case-columns">
-          <article><h3>Challenge</h3><p>{project.challenge}</p></article>
-          <article><h3>Design direction</h3><p>{project.insight}</p></article>
+        <div className="case-detail">
+          <h3>Detailed introduction</h3>
+          <p>{project.detail}</p>
         </div>
       </section>
 
       <section className="case-gallery shell">
-        {project.images.map((image, index) => (
-          <figure key={image.src} className={index % 3 === 0 ? "gallery-wide" : ""}>
+        {project.images.map((image) => (
+          <figure key={image.src}>
             <img src={image.src} alt={image.alt} loading="lazy" />
           </figure>
         ))}
