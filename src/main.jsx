@@ -21,12 +21,38 @@ const projects = [
     detail:
       "The project responds to three connected gaps: the long-term burden of acne scarring, the cost and limited accessibility of clinical multi-spectral equipment, and the inconsistency of ordinary smartphone photographs. LumaSkin combines a compact optical attachment with a guided app workflow so people can capture the same region under comparable conditions, review change across multiple optical indicators, and prepare a clearer trend report for consultation.",
     images: [
-      { src: "/assets/lumaskin-system.jpg", alt: "LumaSkin problem framing and monitoring system" },
-      { src: "/assets/lumaskin-ui.jpg", alt: "LumaSkin app flow and interface design" },
+      { src: "/assets/lumaskin-01.png", alt: "LumaSkin multi-channel optical skin monitoring project board" },
+      { src: "/assets/lumaskin-02.png", alt: "LumaSkin controlled imaging approach and app interface project board" },
     ],
     next:
       "The current prototype has not undergone formal usability testing. A next step is to evaluate setup clarity, scan completion and trust in the resulting report with target users.",
     external: { label: "Open prototype", href: "https://lumaskin-puce.vercel.app/" },
+  },
+  {
+    slug: "active-footrest",
+    title: "Active Footrest",
+    eyebrow: "Mobility experience · Product interaction",
+    summary: "An interactive footrest system that supports movement and in-flight entertainment in long-haul economy class.",
+    cover: "/assets/active-footrest-01.png",
+    year: "2026",
+    role: "User research, product structure, interaction system, rendering and interface concept",
+    theme: "blue",
+    overview:
+      "Active Footrest transforms a passive support component into an interactive surface for lower-limb movement during long-haul flights.",
+    challenge:
+      "Economy passengers remain seated for long periods with limited room for posture changes and lower-limb movement.",
+    insight:
+      "Pressure sensing connects simple foot and ankle movements with an in-flight entertainment experience while retaining passive support.",
+    detail:
+      "The concept combines a supportive footrest, pressure-sensing interaction zones and in-flight entertainment to encourage subtle lower-limb movement without requiring passengers to leave their seats.",
+    images: [
+      { src: "/assets/active-footrest-01.png", alt: "Active Footrest research and medical evidence project board" },
+      { src: "/assets/active-footrest-02.png", alt: "Active Footrest stakeholder analysis and design definition project board" },
+      { src: "/assets/active-footrest-03.png", alt: "Active Footrest product structure and dimensions project board" },
+      { src: "/assets/active-footrest-04.png", alt: "Active Footrest key features and interaction modes project board" },
+    ],
+    next:
+      "The concept defines an integrated physical and digital interaction system for long-haul economy seating.",
   },
   {
     slug: "buffer-zone",
@@ -46,8 +72,7 @@ const projects = [
     detail:
       "Based on literature review and semi-structured interviews, Buffer Zone reframes relatives in critical-care waiting areas as “secondary patients” affected by uncertainty, sensory overload and loss of agency. The concept brings together calm ambient feedback, more legible updates and simple embodied interactions to support emotional regulation while respecting the sensitivity and privacy of a clinical setting.",
     images: [
-      { src: "/assets/buffer-zone-research.jpg", alt: "Buffer Zone interviews, literature study and user analysis" },
-      { src: "/assets/buffer-zone-workflow.jpg", alt: "Buffer Zone sketches and interaction workflow" },
+      { src: "/assets/buffer-zone-full.png", alt: "Complete Buffer Zone research and interaction design project board" },
     ],
     next:
       "This individual concept has not been prototype-tested. Future work should validate comfort, privacy and emotional appropriateness with family members and clinical staff.",
@@ -70,8 +95,7 @@ const projects = [
     detail:
       "Lattice Plus addresses the fragile transition from hospital rehabilitation to sustained recovery at home. Its distributed wearable modules adapt to different body areas and combine magnetic-fluid massage with electrical muscle stimulation, while a companion interface coordinates setup and treatment sessions. The system is designed to make repeated training easier to access for post-operative, older and long-term bedridden users.",
     images: [
-      { src: "/assets/lattice-research.jpg", alt: "Lattice Plus research, applications and design insight" },
-      { src: "/assets/lattice-system.jpg", alt: "Lattice Plus structure and app interface" },
+      { src: "/assets/lattice-plus-full.png", alt: "Complete Lattice Plus wearable rehabilitation system project board" },
     ],
     next:
       "The project received first prize in the Shanghai University Student Industrial Design Competition. The utility-model patent application is under review.",
@@ -94,11 +118,10 @@ const projects = [
     detail:
       "LaserMorph treats laser processing as a way to encode latent volume rather than only remove material. Controlled ablation produces depth differences in compressed cellulose sponge; hydration releases the stored volume and turns the flat sheet into a continuous 3D form. After drying, the material can be thermally recompressed and activated again. Material calibration and a Rhino-Grasshopper workflow make this non-linear process controllable for rapid prototyping, tangible interfaces and compact deployment.",
     images: [
-      { src: "/assets/lasermorph-mechanism.jpg", alt: "LaserMorph material mechanism" },
-      { src: "/assets/lasermorph-workflow.jpg", alt: "LaserMorph fabrication workflow" },
-      { src: "/assets/lasermorph-design-space.jpg", alt: "LaserMorph design space" },
-      { src: "/assets/lasermorph-tool.jpg", alt: "LaserMorph computational design tool and educational platform" },
-      { src: "/assets/lasermorph-applications.jpg", alt: "LaserMorph application explorations" },
+      { src: "/assets/lasermorph-01.png", alt: "LaserMorph material and mechanism project board" },
+      { src: "/assets/lasermorph-02.png", alt: "LaserMorph workflow and design space project board" },
+      { src: "/assets/lasermorph-03.png", alt: "LaserMorph design tool and educational platform project board" },
+      { src: "/assets/lasermorph-04.png", alt: "LaserMorph applications project board" },
     ],
     next:
       "LaserMorph was accepted to UIST 2026. The work demonstrates applications in rapid prototyping, compact deployment and tangible interaction.",
@@ -247,47 +270,20 @@ function WorkPage() {
 function AboutPage() {
   return (
     <main className="shell inner-page about-page">
-      <header className="about-hero">
-        <div>
-          <p>About</p>
-          <h1>I am Giselle, a product and UX designer based in Shanghai.</h1>
-        </div>
-        <img src="/assets/portrait.jpg" alt="Portrait of Giselle Qin" />
+      <header className="document-page-header">
+        <p>About</p>
+        <h1>Resume</h1>
       </header>
-      <section className="about-copy">
-        <p className="about-large">
-          I study Product Design at Tongji University College of Design and Innovation. I am interested in how research, digital interfaces and physical systems can work together to make complex experiences easier to understand and act on.
-        </p>
-        <div className="about-columns">
-          <div>
-            <h2>Experience</h2>
-            <p><strong>Kohler (China) Investment Co., Ltd.</strong><br />IT Department Intern, 2025</p>
-            <p><strong>Shanghai HOTO Technology Co., Ltd.</strong><br />Product Studio Intern, 2026</p>
-          </div>
-          <div>
-            <h2>Recognition</h2>
-            <p>UIST 2026 paper accepted</p>
-            <p>First Prize, Shanghai University Student Industrial Design Competition</p>
-            <p>Tongji University Scholarship</p>
-          </div>
-          <div>
-            <h2>Tools</h2>
-            <p>Figma, Rhino, Grasshopper, Illustrator, Photoshop and After Effects</p>
-            <p>IELTS 7.0</p>
-          </div>
-        </div>
-      </section>
+      <img className="resume-sheet" src="/assets/resume-light.png" alt="Giselle Qin resume" />
       <Footer />
     </main>
   );
 }
 
 function ProjectPage({ project }) {
-  const isLaserMorph = project.slug === "lasermorph";
-
   return (
     <main className={`project-page theme-${project.theme}`}>
-      <section className="project-hero shell">
+      <section className="project-document-header shell">
         <a className="back-link" href="#/work">← All work</a>
         <div className="project-title-row">
           <div>
@@ -296,63 +292,16 @@ function ProjectPage({ project }) {
           </div>
           <p>{project.summary}</p>
         </div>
-        {isLaserMorph ? (
-          <>
-            <div className="featured-video">
-              <iframe
-                src="https://www.youtube-nocookie.com/embed/Z6qIfrtLf6Q?rel=0"
-                title="LaserMorph project video"
-                loading="eager"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-              />
-            </div>
-            <div className="project-site-row">
-              <p>See the complete research, fabrication process and applications.</p>
-              <a className="project-site-cta" href="https://lasermorphweb.github.io/" target="_blank" rel="noreferrer">
-                Visit LaserMorph website <span aria-hidden="true">↗</span>
-              </a>
-            </div>
-          </>
-        ) : (
-          <img src={project.cover} alt={`${project.title} project cover`} />
-        )}
       </section>
 
-      <section className="project-meta shell">
-        <div><span>Year</span><p>{project.year}</p></div>
-        <div><span>Role</span><p>{project.role}</p></div>
-        <div><span>Scope</span><p>{project.eyebrow}</p></div>
-      </section>
-
-      <section className="case-copy shell">
-        <div>
-          <p>Overview</p>
-          <h2>{project.overview}</h2>
-        </div>
-        <div className="case-detail">
-          <h3>Detailed introduction</h3>
-          <p>{project.detail}</p>
-        </div>
-      </section>
-
-      <section className="case-gallery shell">
-        {project.images.map((image) => (
+      <section className="full-page-gallery" aria-label={`${project.title} project boards`}>
+        {project.images.map((image, index) => (
           <figure key={image.src}>
-            <img src={image.src} alt={image.alt} loading="lazy" />
+            <img src={image.src} alt={image.alt} loading={index === 0 ? "eager" : "lazy"} />
           </figure>
         ))}
       </section>
 
-      <section className="reflection shell">
-        <p>Outcome and next step</p>
-        <h2>{project.next}</h2>
-        <div className="reflection-links">
-          {project.external && <a className="text-link" href={project.external.href} target="_blank" rel="noreferrer">{project.external.label} <span aria-hidden="true">↗</span></a>}
-          <a className="text-link" href="#/work">View all work <span aria-hidden="true">↗</span></a>
-        </div>
-      </section>
       <Footer />
     </main>
   );

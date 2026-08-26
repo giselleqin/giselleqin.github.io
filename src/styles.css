@@ -121,11 +121,35 @@ button { font: inherit; }
 .about-columns p { color: var(--muted); line-height: 1.65; }
 .about-columns strong { color: var(--text); }
 
+.document-page-header {
+  padding-block: 54px 42px;
+}
+.document-page-header p {
+  margin: 0 0 12px;
+  color: var(--accent);
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+.document-page-header h1 {
+  margin: 0;
+  font-size: clamp(52px, 7vw, 92px);
+  line-height: .95;
+  letter-spacing: -.04em;
+}
+.resume-sheet {
+  height: auto;
+  margin-bottom: 100px;
+}
+
 .project-page { --project-accent: var(--accent); }
 .theme-aqua { --project-accent: #1f8f89; }
 .theme-violet { --project-accent: #7c5fb9; }
 .theme-blue { --project-accent: #3f72d8; }
 .theme-orange { --project-accent: #c86e18; }
+.project-document-header { padding-block: 54px 64px; }
+.project-document-header .back-link { margin-bottom: 64px; }
 .project-hero { padding-top: 62px; }
 .back-link { display: inline-block; margin-bottom: 80px; color: var(--muted); font-size: 14px; }
 .project-title-row { display: grid; grid-template-columns: 1.1fr .9fr; align-items: end; gap: 80px; margin-bottom: 54px; }
@@ -176,6 +200,16 @@ button { font: inherit; }
 .case-gallery { display: flex; flex-direction: column; gap: 24px; width: min(100% - 48px, 1040px); padding-bottom: 120px; }
 .case-gallery figure { margin: 0; overflow: hidden; border-radius: var(--radius); background: var(--surface); }
 .case-gallery img { height: auto; object-fit: contain; }
+.full-page-gallery {
+  width: min(100%, 1600px);
+  margin-inline: auto;
+  background: #fff;
+}
+.full-page-gallery figure { margin: 0; }
+.full-page-gallery img {
+  width: 100%;
+  height: auto;
+}
 .reflection { padding-block: 120px; border-top: 1px solid var(--line); }
 .reflection h2 { max-width: 1100px; }
 .reflection-links { display: flex; flex-wrap: wrap; gap: 26px; margin-top: 46px; }
@@ -216,6 +250,8 @@ button { font: inherit; }
   .about-copy { padding-block: 70px 90px; }
   .about-columns { grid-template-columns: 1fr; margin-top: 70px; }
   .project-hero { padding-top: 36px; }
+  .project-document-header { padding-block: 36px 42px; }
+  .project-document-header .back-link { margin-bottom: 48px; }
   .back-link { margin-bottom: 54px; }
   .project-title-row h1 { font-size: 66px; }
   .project-title-row > p { font-size: 20px; }
@@ -228,6 +264,8 @@ button { font: inherit; }
   .case-detail p { font-size: 16px; }
   .case-gallery { width: calc(100% - 32px); padding-bottom: 80px; }
   .reflection { padding-block: 80px; }
+  .document-page-header { padding-block: 36px 30px; }
+  .resume-sheet { margin-bottom: 70px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
